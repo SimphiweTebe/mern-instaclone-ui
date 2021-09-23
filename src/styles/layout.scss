@@ -1,0 +1,141 @@
+.profile{
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    margin-top: 10rem;
+    border-bottom: 1px solid $greyLight;
+    padding-bottom: 4rem;
+
+    &-pic{
+        flex-basis: 100%;
+        max-width: 150px;
+        border-radius: 50%;
+        background-repeat: no-repeat;
+        min-height: 150px;
+    }
+
+    &-details{
+        flex-basis: 100%;
+
+        h4{
+            font-weight: 500;
+            font-size: 2.4rem;
+            margin-bottom: 2rem;
+        }
+
+        &__stats{
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            font-size: 1.4rem;
+        }
+    }
+
+    @media screen and (min-width: 520px){
+
+        flex-direction: row;
+        // &-pic{
+        //     flex-basis: 300px;
+        // }
+    
+        // &-details{
+        //     flex-basis: 50%;
+        // }
+    }
+}
+.user-gallery{
+    margin: 0 auto;
+    margin-top: 4rem;
+    position: relative;
+    width: 100%;
+    min-height: 300px;
+
+    img{
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+        margin-bottom: 2.5rem;
+    }
+
+    @media screen and (min-width: 520px){
+        img{
+            width: 48%;
+        }
+    }
+    @media screen and (min-width: 720px){
+        img{
+            width: 32%;
+        }
+    }
+    @media screen and (min-width: 920px){
+        img{
+            width: 23%;
+        }
+    }
+}
+.home{
+    position: relative;
+    margin: auto;
+    margin-top: 10rem;
+    width: 100%;
+    max-width: 600px;
+
+    &-card{
+        position: relative;
+        margin-bottom: 3rem;
+        border: 1px solid $greyLight;
+        border-radius: 2px;
+
+        .posted-by{
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            padding: 1rem 1.3rem;
+
+            .user-pic{
+                width: 50px;
+                height: 50px;
+                border-radius: 50%;
+            }
+        }
+
+        .post-item{
+            position: relative;
+            width: 100%;
+
+            img{
+                display: block;
+                width: 100%;
+            }
+        }
+
+        .post-title{
+            position: relative;
+            padding: 1rem 1.3rem;
+            border-bottom: 1px solid $greyLight;
+        }
+        .post-comments{
+            position: relative;
+            padding: 1rem 1.3rem;
+            display: flex;
+            align-items: center;
+            gap: 30px;
+
+            span{
+                font-size: 2rem;
+                transform: translate(0,3px);
+            }
+
+            input{
+                flex: 1;
+            }
+            button{
+                color: $blue;
+                font-weight: 600;
+                cursor: pointer;
+            }
+        }
+    }
+}

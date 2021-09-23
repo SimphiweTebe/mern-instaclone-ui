@@ -1,0 +1,40 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+}
+a{
+  text-decoration: none;
+}
+ul{
+  list-style: none;
+}
+button{
+  background: none;
+}
+html{
+  font-size: 62.5%;
+}
+body{
+  font-size: 1.6rem;
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  color: 	#484848;
+}
+.page{
+  position: relative;
+  margin: 80px auto;
+  width: 90%;
+  max-width: 1000px;
+  min-height: calc(100vh - 80px);
+}
+$black: #484848;
+$grey: #8e8e8e;
+$greyLight: lighten($grey, 30);
+$blue: #1D7DFF;
+
+@import './forms.scss';
+@import './grids.scss';
+@import './layout.scss';

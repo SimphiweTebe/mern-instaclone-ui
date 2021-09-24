@@ -22,6 +22,12 @@
         border-radius: 30px;
         background-color: #F0F4F7;
       }
+      input[type="file"]{
+        width: 100%;
+        background-color: #fff;
+        border-radius: 0;
+        padding: 1rem 0;
+      }
       button{
         width: 100%;
         padding: 1rem;
@@ -43,5 +49,13 @@
         text-align: center;
         color: #484848;
       }
+    }
+    .errors{
+      position: relative;
+      margin-top: 3rem;
+      width: 100%;
+      color: red;
+      font-size: 1.4rem;
+      text-align: center;
     }
   }

@@ -4,7 +4,7 @@ import {Link} from 'react-router-dom'
 function Login() {
     return (
         <section className="form-wrapper">
-            <h1>Instaclone</h1>
+            <h1>Login</h1>
             <form className="form">
                 <label htmlFor="email">
                     <input type="email" name="email" id="email" placeholder="Your email" />

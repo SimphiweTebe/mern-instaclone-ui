@@ -113,8 +113,13 @@
 
         .post-title{
             position: relative;
-            padding: 1rem 1.3rem;
+            padding: 2rem 1.3rem 1.5rem;
             border-bottom: 1px solid $greyLight;
+        }
+        .post-icons{
+            position: relative;
+            padding: 1rem 1.3rem 0;
+            font-size: 2rem;
         }
         .post-comments{
             position: relative;

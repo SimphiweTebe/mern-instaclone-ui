@@ -3,7 +3,9 @@ import { Link } from 'react-router-dom'
 import './nav.scss'
 import { FiHome } from 'react-icons/fi'
 import { FaRegUserCircle } from 'react-icons/fa'
-import { ImEnter } from 'react-icons/im'
+import { AiOutlineLogin } from 'react-icons/ai'
+import { GrAddCircle } from 'react-icons/gr'
+
 
 function Navbar() {
 
@@ -19,14 +21,20 @@ function Navbar() {
                     </li>
                     <li>
                         <Link to="/login">
-                            <span className="link-icon"><ImEnter /></span>
+                            <span className="link-icon"><AiOutlineLogin /></span>
                             <span className="link-text">Login</span>
                         </Link>
                     </li>
                     <li>
                         <Link to="/signup">
-                            <span className="link-icon"><ImEnter /></span>
+                            <span className="link-icon"><AiOutlineLogin /></span>
                             <span className="link-text">Sign up</span>
+                        </Link>
+                    </li>
+                    <li>
+                        <Link to="/create">
+                            <span className="link-icon"><GrAddCircle /></span>
+                            <span className="link-text">Create Post</span>
                         </Link>
                     </li>
                     <li>

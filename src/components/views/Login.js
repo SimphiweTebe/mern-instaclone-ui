@@ -1,5 +1,7 @@
 import React, { useState } from 'react'
+import { useDispatch } from 'react-redux'
 import {Link, useHistory } from 'react-router-dom'
+import { getUser } from '../../redux/actions/userActions'
 import axios from 'axios'
 
 function Login() {
@@ -9,7 +11,7 @@ function Login() {
         password: ""
     })
     const [errors, setErrors] = useState('')
-
+    const dispatch = useDispatch()
     const history = useHistory()
 
     const handleInputs = e => {
@@ -21,9 +23,13 @@ function Login() {
         
         try{
             const response = await axios.post('/login', user)
+            // console.log(response.data);
+            // document.cookie = `jwt=${response.data.token}`
+            // document.cookie = `user=${response.data.token}` 
+            localStorage.setItem('jwt', response.data.token)
+            localStorage.setItem('user', JSON.stringify(response.data.user))
+            dispatch(getUser(response.data))
             history.push('/')
-            console.log(response.data);
-            
         }catch(res){
             await setErrors(res.response.data.error)
         }
